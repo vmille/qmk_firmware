@@ -1,0 +1,4 @@
+SRC += muse.c
+MOUSEKEY_ENABLE = yes
+COMMAND_ENABLE = no
+AUDIO_ENABLE = no
