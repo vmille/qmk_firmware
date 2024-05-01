@@ -54,5 +54,16 @@
 #define ______________IDE_R4_RIGHT______________ XXXXXXX, XXXXXXX  , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define ______IDE_T_RIGHT______ XXXXXXX, XXXXXXX, XXXXXXX
 
+#define ______________MOUSE_R1_LEFT______________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define ______________MOUSE_R2_LEFT______________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define ______________MOUSE_R3_LEFT______________ XXXXXXX, XXXXXXX, DRGSCRL, SNIPING, XXXXXXX, XXXXXXX
+#define ______________MOUSE_R4_LEFT______________ XXXXXXX, XXXXXXX, C(KC_X), C(KC_C), C(KC_V), XXXXXXX
+#define ______MOUSE_T_LEFT______ KC_BTN2, KC_BTN1, KC_BTN3
+
+#define ______________MOUSE_R1_RIGHT______________ XXXXXXX, XXXXXXX  , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define ______________MOUSE_R2_RIGHT______________ XXXXXXX, XXXXXXX  , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define ______________MOUSE_R3_RIGHT______________ XXXXXXX, XXXXXXX  , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define ______________MOUSE_R4_RIGHT______________ XXXXXXX, XXXXXXX  , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define ______MOUSE_T_RIGHT______ XXXXXXX, XXXXXXX, XXXXXXX
 
 #endif //LAYOUT_H
