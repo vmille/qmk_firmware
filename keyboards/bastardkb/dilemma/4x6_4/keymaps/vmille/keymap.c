@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
  [FUNCTION] = LAYOUT(
  // ╭──────────────────────────────────────────────╮ ╭──────────────────────────────────────────────╮
-       KC_ESC , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, CG_TOGG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_CAPS,
+       KC_ESC , KC_CAPS,CG_TOGG,XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
  // ├──────────────────────────────────────────────┤ ├──────────────────────────────────────────────┤
        XXXXXXX, KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_INSERT, XXXXXXX, KC_HOME, KC_UP  , KC_PGUP, XXXXXXX, XXXXXXX,
  // ├──────────────────────────────────────────────┤ ├──────────────────────────────────────────────┤
@@ -64,12 +64,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // ├──────────────────────────────────────────────┤ ├──────────────────────────────────────────────┤
        XXXXXXX, KC_F9  , KC_F10 , KC_F11 , KC_F12 , KC_SYRQ, XXXXXXX, KC_PGDN, XXXXXXX, KC_END , XXXXXXX, XXXXXXX,
  // ╰──────────────────────────────────────────────┤ ├──────────────────────────────────────────────╯
-               XXXXXXX, ENT_LCH, _______, _______, _______, _______, _______, XXXXXXX
+               XXXXXXX, _______, _______, _______, _______, _______, _______, XXXXXXX
  //            ╰───────────────────────────────────╯ ╰───────────────────────────────────╯
   ),
   [NAV] = LAYOUT(
   // ╭────────────────────────────────────────╮ ╭────────────────────────────────────────╮
-       ESC_LCH , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX , XXXXXXX, XXXXXXX,
+       ESC_LCH , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX , XXXXXXX, XXXXXXX,
   // ├────────────────────────────────────────┤ ├────────────────────────────────────────┤
         RGB_MOD , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_HOME, KC_UP  , KC_PGUP , XXXXXXX, XXXXXXX,
   // ├────────────────────────────────────────┤ ├────────────────────────────────────────┤
@@ -77,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├────────────────────────────────────────┤ ├────────────────────────────────────────┤
        RGB_RMOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PGDN, XXXXXXX, KC_END  , XXXXXXX, XXXXXXX,
   // ╰────────────────────────────────────────┤ ├────────────────────────────────────────╯
-               XXXXXXX,  XXXXXXX, XXXXXXX, _______, KC_TAB, _______, _______, XXXXXXX
+               XXXXXXX,  ENT_LCH, _______, _______, KC_TAB, _______, _______, XXXXXXX
   //      ╰───────────────────────────────────╯ ╰───────────────────────────────────╯
   ),
 
@@ -140,7 +140,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
            	return false;
 		case ENT_LCH:
 			layer_move(BASE);
-           	return false;
+           	break;
 		case ESC_LCH:
            	tap_code16(KC_ESC);
 			layer_move(BASE);
@@ -149,3 +149,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
    return true;
 }
 
+bool rgb_matrix_indicators_user(void) {
+    uint8_t current_layer = get_highest_layer(layer_state);
+    switch (current_layer) {
+        case NAV:
+            rgb_matrix_set_color_all(0xFF, 0xFF, 0x00);  // RGB yellow
+            break;
+        default:
+            break;
+    }
+    return false;
+}
