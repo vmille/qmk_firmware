@@ -2,10 +2,10 @@
 // Created by Vivien on 5/1/2024.
 //
 
-#ifndef KEYCODES_H
-#define KEYCODES_H
+#pragma once
 
-#include QMK_KEYBOARD_H
+
+
 
 enum my_keycodes {
     CTRL_MAJ_V_LCH = SAFE_RANGE,
@@ -29,5 +29,3 @@ const key_override_t **key_overrides = (const key_override_t *[]){
     NULL // Null terminate the array of overrides!
 };
 
-
-#endif //KEYCODES_H

@@ -2,8 +2,8 @@
 // Created by Vivien on 5/1/2024.
 //
 
-#ifndef LAYOUT_H
-#define LAYOUT_H
+#pragma once
+
 
 #define ______________BASE_R1_LEFT______________ KC_EQL , KC_1           , KC_2        , KC_3        , KC_4        , KC_5
 #define ______________BASE_R2_LEFT______________ KC_BSLS, KC_Q           , KC_W        , KC_E        , KC_R        , KC_T
@@ -66,4 +66,4 @@
 #define ______________MOUSE_R4_RIGHT______________ XXXXXXX, XXXXXXX  , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define ______MOUSE_T_RIGHT______ XXXXXXX, XXXXXXX, XXXXXXX
 
-#endif //LAYOUT_H
+
