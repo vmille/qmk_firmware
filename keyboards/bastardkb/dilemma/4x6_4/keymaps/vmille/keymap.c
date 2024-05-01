@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────┤ ├────────────────────────────────────────┤
         KC_BSLS, KC_Q           , KC_W        , KC_E        , KC_R        , KC_T, KC_Y        , KC_U        , KC_I        , KC_O        , KC_P   , KC_QUOT,
   // ├──────────────────────────────────────────┤ ├────────────────────────────────────────┤
-        KC_LWIN, LT(MOUSE, KC_A), LALT_T(KC_S), LSFT_T(KC_D), LCTL_T(KC_F), RCTL_T(KC_G), RCTL_T(KC_H), LCTL_T(KC_J), LSFT_T(KC_K), LALT_T(KC_L), KC_SCLN, KC_GRV,
+       KC_GRV , LT(MOUSE, KC_A), LALT_T(KC_S), LSFT_T(KC_D), LCTL_T(KC_F), RCTL_T(KC_G), RCTL_T(KC_H), LCTL_T(KC_J), LSFT_T(KC_K), LALT_T(KC_L), KC_SCLN,KC_LWIN ,
   // ├──────────────────────────────────────────┤ ├────────────────────────────────────────┤
         KC_LBRC, KC_Z           , KC_X        , KC_C        , KC_V        , KC_B, KC_N        , KC_M        , KC_COMM     , KC_DOT      , KC_SLSH, KC_RBRC,
   // ╰──────────────────────────────────────────┤ ├────────────────────────────────────────╯
@@ -58,11 +58,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // ╭──────────────────────────────────────────────╮ ╭──────────────────────────────────────────────╮
        KC_ESC , KC_CAPS,CG_TOGG,XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
  // ├──────────────────────────────────────────────┤ ├──────────────────────────────────────────────┤
-       XXXXXXX, KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_INSERT, XXXXXXX, KC_HOME, KC_UP  , KC_PGUP, XXXXXXX, XXXXXXX,
+       XXXXXXX, KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_INSERT, XXXXXXX, XXXXXXX, XXXXXXX  , XXXXXXX, XXXXXXX, XXXXXXX,
  // ├──────────────────────────────────────────────┤ ├──────────────────────────────────────────────┤
        XXXXXXX, KC_F5  , KC_F6  , KC_F7  , KC_F8  , XXXXXXX, KC_RCTL, KC_LCTL, KC_LSFT, KC_LALT, XXXXXXX, XXXXXXX,
  // ├──────────────────────────────────────────────┤ ├──────────────────────────────────────────────┤
-       XXXXXXX, KC_F9  , KC_F10 , KC_F11 , KC_F12 , KC_SYRQ, XXXXXXX, KC_PGDN, XXXXXXX, KC_END , XXXXXXX, XXXXXXX,
+       XXXXXXX, KC_F9  , KC_F10 , KC_F11 , KC_F12 , KC_SYRQ, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX , XXXXXXX, XXXXXXX,
  // ╰──────────────────────────────────────────────┤ ├──────────────────────────────────────────────╯
                XXXXXXX, _______, _______, _______, _______, _______, _______, XXXXXXX
  //            ╰───────────────────────────────────╯ ╰───────────────────────────────────╯
@@ -71,9 +71,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭────────────────────────────────────────╮ ╭────────────────────────────────────────╮
        ESC_LCH , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX , XXXXXXX, XXXXXXX,
   // ├────────────────────────────────────────┤ ├────────────────────────────────────────┤
-        RGB_MOD , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_HOME, KC_UP  , KC_PGUP , XXXXXXX, XXXXXXX,
+        RGB_MOD , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_WBAK, KC_HOME, KC_UP  , KC_PGUP , XXXXXXX, XXXXXXX,
   // ├────────────────────────────────────────┤ ├────────────────────────────────────────┤
-       RGB_TOG , XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, KC_RCTL, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX,
+       RGB_TOG , XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, KC_RCTL, KC_WFWD, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX,
   // ├────────────────────────────────────────┤ ├────────────────────────────────────────┤
        RGB_RMOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PGDN, XXXXXXX, KC_END  , XXXXXXX, XXXXXXX,
   // ╰────────────────────────────────────────┤ ├────────────────────────────────────────╯
@@ -98,9 +98,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭─────────────────────────────────────────╮ ╭─────────────────────────────────────────╮
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├─────────────────────────────────────────┤ ├─────────────────────────────────────────┤
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_WBAK, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├─────────────────────────────────────────┤ ├─────────────────────────────────────────┤
-      XXXXXXX, XXXXXXX, DRGSCRL, SNIPING, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, DRGSCRL, SNIPING, XXXXXXX, XXXXXXX, KC_WFWD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├─────────────────────────────────────────┤ ├─────────────────────────────────────────┤
       XXXXXXX, XXXXXXX, C(KC_X), C(KC_C), C(KC_V), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ╰─────────────────────────────────────────┤ ├─────────────────────────────────────────╯
