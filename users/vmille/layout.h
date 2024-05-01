@@ -7,13 +7,13 @@
 
 #define ______________BASE_R1_LEFT______________ KC_EQL , KC_1           , KC_2        , KC_3        , KC_4        , KC_5
 #define ______________BASE_R2_LEFT______________ KC_BSLS, KC_Q           , KC_W        , KC_E        , KC_R        , KC_T
-#define ______________BASE_R3_LEFT______________ KC_LPRN, LT(MOUSE, KC_A), LALT_T(KC_S), LSFT_T(KC_D), LCTL_T(KC_F), RCTL_T(KC_G)
+#define ______________BASE_R3_LEFT______________ KC_LWIN, LT(MOUSE, KC_A), LALT_T(KC_S), LSFT_T(KC_D), LCTL_T(KC_F), RCTL_T(KC_G)
 #define ______________BASE_R4_LEFT______________ KC_LBRC, KC_Z           , KC_X        , KC_C        , KC_V        , KC_B
 #define ______BASE_T_LEFT______ KC_ENT, KC_BTN1, LT(NAV, KC_DEL)
 
 #define ______________BASE_R1_RIGHT______________ KC_6        , KC_7        , KC_8        , KC_9        , KC_0   , KC_MINS
 #define ______________BASE_R2_RIGHT______________ KC_Y        , KC_U        , KC_I        , KC_O        , KC_P   , KC_QUOT
-#define ______________BASE_R3_RIGHT______________ RCTL_T(KC_H), LCTL_T(KC_J), LSFT_T(KC_K), LALT_T(KC_L), KC_SCLN, KC_RPRN
+#define ______________BASE_R3_RIGHT______________ RCTL_T(KC_H), LCTL_T(KC_J), LSFT_T(KC_K), LALT_T(KC_L), KC_SCLN, KC_GRV
 #define ______________BASE_R4_RIGHT______________ KC_N        , KC_M        , KC_COMM     , KC_DOT      , KC_SLSH, KC_RBRC
 #define ______BASE_T_RIGHT______ LT(FUNCTION, KC_BSPC), KC_SPC, MO(IDE)
 
