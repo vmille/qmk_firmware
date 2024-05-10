@@ -6,9 +6,13 @@
   outputs = { self, nixpkgs, flake-utils }:
     flake-utils.lib.eachDefaultSystem
       (system:
-        let pkgs = nixpkgs.legacyPackages.${system}; in
+        let pkgs = import nixpkgs { system = "${system}"; config.allowUnfree = true; };
+            qmk_packages = import ./shell.nix { inherit pkgs; };
+        in
         {
-          devShells.default = import ./shell.nix { inherit pkgs; };
+          devShells.default = pkgs.mkShell {
+            buildInputs = [pkgs.jetbrains.clion ] ++ qmk_packages.buildInputs;
+          };
         }
       );
 }
