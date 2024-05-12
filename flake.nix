@@ -11,7 +11,11 @@
         in
         {
           devShells.default = pkgs.mkShell {
-            buildInputs = [pkgs.jetbrains.clion ] ++ qmk_packages.buildInputs;
+            packages = [ pkgs.jetbrains.clion ];
+            buildInputs = qmk_packages.buildInputs;
+            shellHook = ''
+              clion .
+            '';
           };
         }
       );

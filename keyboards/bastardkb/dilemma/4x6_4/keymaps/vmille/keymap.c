@@ -16,8 +16,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include QMK_KEYBOARD_H
-#include "layout.h"
-#include "keycodes.h"
+//#include "layout.h"
+//#include "keycodes.h"
 
 enum custom_keycodes {
     CTRL_MAJ_V_LCH = SAFE_RANGE,
