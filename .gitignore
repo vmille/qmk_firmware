@@ -118,3 +118,4 @@ via*.json
 /keyboards/**/keymaps/vial/*
 
 .direnv
+_devEnv.nix

@@ -7,15 +7,15 @@
     flake-utils.lib.eachDefaultSystem
       (system:
         let pkgs = import nixpkgs { system = "${system}"; config.allowUnfree = true; };
-            qmk_packages = import ./shell.nix { inherit pkgs; };
+            qmkPackages = import ./shell.nix { inherit pkgs; };
+            devEnv = if builtins.pathExists ./_devEnv.nix then import ./_devEnv.nix { inherit pkgs; } else {};
+            env = pkgs.lib.zipAttrs [qmkPackages devEnv];
         in
         {
           devShells.default = pkgs.mkShell {
-            packages = [ pkgs.jetbrains.clion ];
-            buildInputs = qmk_packages.buildInputs;
-            shellHook = ''
-              clion .
-            '';
+            packages = if env ? packages then env.packages else [];
+            buildInputs = env.buildInputs;
+            DEV_EDITOR = if env ? DEV_EDITOR then env.DEV_EDITOR else "";
           };
         }
       );
