@@ -23,7 +23,6 @@ enum custom_keycodes {
     CTRL_MAJ_V_LCH = SAFE_RANGE,
     GUI_V_LCH,
     ENT_LCH,
-    ESC_LCH,
     NEW_SAFE_RANGE  //use "NEW_SAFE_RANGE" for keymap specific codes
 };
 
@@ -69,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [NAV] = LAYOUT(
   // ╭────────────────────────────────────────╮ ╭────────────────────────────────────────╮
-       ESC_LCH , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX , XXXXXXX, XXXXXXX,
+       KC_ESC , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX , XXXXXXX, XXXXXXX,
   // ├────────────────────────────────────────┤ ├────────────────────────────────────────┤
         RGB_MOD , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_WBAK, KC_HOME, KC_UP  , KC_PGUP , XXXXXXX, XXXXXXX,
   // ├────────────────────────────────────────┤ ├────────────────────────────────────────┤
@@ -131,7 +130,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	switch (keycode) {
     	case CTRL_MAJ_V_LCH:
-      	    tap_code16(RCS(KC_V));
+      	    tap_code16(LCTL(LSFT(KC_V)));
             layer_move(NAV);
            	return false;
        	case GUI_V_LCH:
@@ -141,10 +140,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 		case ENT_LCH:
 			layer_move(BASE);
            	break;
-		case ESC_LCH:
-           	tap_code16(KC_ESC);
-			layer_move(BASE);
-           	return false;
    }
    return true;
 }
@@ -153,7 +148,13 @@ bool rgb_matrix_indicators_user(void) {
     uint8_t current_layer = get_highest_layer(layer_state);
     switch (current_layer) {
         case NAV:
-            rgb_matrix_set_color_all(0xFF, 0xFF, 0x00);  // RGB yellow
+            rgb_matrix_set_color_all(0x50, 0x50, 0x00);  // RGB yellow
+            break;
+        case FUNCTION:
+            rgb_matrix_set_color_all(0x50, 0x00, 0x50);  // RGB yellow
+            break;
+        case MOUSE:
+            rgb_matrix_set_color_all(0x00, 0x00, 0x50);  // RGB blue
             break;
         default:
             break;
