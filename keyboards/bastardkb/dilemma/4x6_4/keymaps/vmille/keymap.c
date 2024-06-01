@@ -148,13 +148,13 @@ bool rgb_matrix_indicators_user(void) {
     uint8_t current_layer = get_highest_layer(layer_state);
     switch (current_layer) {
         case NAV:
-            rgb_matrix_set_color_all(0x50, 0x50, 0x00);  // RGB yellow
+            rgb_matrix_set_color_all(0x10, 0x10, 0x00);  // RGB yellow
             break;
         case FUNCTION:
-            rgb_matrix_set_color_all(0x50, 0x00, 0x50);  // RGB yellow
+            rgb_matrix_set_color_all(0x10, 0x00, 0x10);  // RGB yellow
             break;
         case MOUSE:
-            rgb_matrix_set_color_all(0x00, 0x00, 0x50);  // RGB blue
+            rgb_matrix_set_color_all(0x00, 0x00, 0x10);  // RGB blue
             break;
         default:
             break;
