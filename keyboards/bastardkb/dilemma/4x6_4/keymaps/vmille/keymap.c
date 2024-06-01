@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
  [FUNCTION] = LAYOUT(
  // ╭──────────────────────────────────────────────╮ ╭──────────────────────────────────────────────╮
-       KC_ESC , KC_CAPS,CG_TOGG,XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       KC_ESC , KC_CAPS,CG_LSWP,XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
  // ├──────────────────────────────────────────────┤ ├──────────────────────────────────────────────┤
        XXXXXXX, KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_INSERT, XXXXXXX, XXXXXXX, XXXXXXX  , XXXXXXX, XXXXXXX, XXXXXXX,
  // ├──────────────────────────────────────────────┤ ├──────────────────────────────────────────────┤
