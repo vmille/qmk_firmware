@@ -26,7 +26,7 @@ enum custom_keycodes {
     NEW_SAFE_RANGE  //use "NEW_SAFE_RANGE" for keymap specific codes
 };
 
-#define BUILD RCTL(KC_F9)
+#define BUILD LCTL(KC_F9)
 #define RUN S(KC_F9)
 #define DEBUG S(KC_F10)
 
@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────┤ ├────────────────────────────────────────┤
         KC_BSLS, KC_Q           , KC_W        , KC_E        , KC_R        , KC_T, KC_Y        , KC_U        , KC_I        , KC_O        , KC_P   , KC_QUOT,
   // ├──────────────────────────────────────────┤ ├────────────────────────────────────────┤
-       KC_GRV , LT(MOUSE, KC_A), LALT_T(KC_S), LSFT_T(KC_D), LCTL_T(KC_F), RCTL_T(KC_G), RCTL_T(KC_H), LCTL_T(KC_J), LSFT_T(KC_K), LALT_T(KC_L), KC_SCLN,KC_LWIN ,
+       KC_GRV , LT(MOUSE, KC_A), LALT_T(KC_S), LSFT_T(KC_D), RCTL_T(KC_F), LCTL_T(KC_G), LCTL_T(KC_H), RCTL_T(KC_J), LSFT_T(KC_K), LALT_T(KC_L), KC_SCLN,KC_LWIN ,
   // ├──────────────────────────────────────────┤ ├────────────────────────────────────────┤
         KC_LBRC, KC_Z           , KC_X        , KC_C        , KC_V        , KC_B, KC_N        , KC_M        , KC_COMM     , KC_DOT      , KC_SLSH, KC_RBRC,
   // ╰──────────────────────────────────────────┤ ├────────────────────────────────────────╯
@@ -55,11 +55,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
  [FUNCTION] = LAYOUT(
  // ╭──────────────────────────────────────────────╮ ╭──────────────────────────────────────────────╮
-       KC_ESC , KC_CAPS,CG_LNRM,CG_LSWP, XXXXXXX, XXXXXXX, QK_BOOT, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       KC_ESC , KC_CAPS,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
  // ├──────────────────────────────────────────────┤ ├──────────────────────────────────────────────┤
        XXXXXXX, KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_INSERT, XXXXXXX, XXXXXXX, XXXXXXX  , XXXXXXX, XXXXXXX, XXXXXXX,
  // ├──────────────────────────────────────────────┤ ├──────────────────────────────────────────────┤
-       XXXXXXX, KC_F5  , KC_F6  , KC_F7  , KC_F8  , XXXXXXX, KC_RCTL, KC_LCTL, KC_LSFT, KC_LALT, XXXXXXX, XXXXXXX,
+       XXXXXXX, KC_F5  , KC_F6  , KC_F7  , KC_F8  , XXXXXXX, KC_LCTL, KC_RCTL, KC_LSFT, KC_LALT, XXXXXXX, XXXXXXX,
  // ├──────────────────────────────────────────────┤ ├──────────────────────────────────────────────┤
        XXXXXXX, KC_F9  , KC_F10 , KC_F11 , KC_F12 , KC_SYRQ, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX , XXXXXXX, XXXXXXX,
  // ╰──────────────────────────────────────────────┤ ├──────────────────────────────────────────────╯
@@ -68,11 +68,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [NAV] = LAYOUT(
   // ╭────────────────────────────────────────╮ ╭────────────────────────────────────────╮
-       KC_ESC , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX , XXXXXXX, XXXXXXX,
+       KC_ESC , CG_LNRM,CG_LSWP, CG_RNRM,CG_RSWP, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX , XXXXXXX, XXXXXXX,
   // ├────────────────────────────────────────┤ ├────────────────────────────────────────┤
         RGB_MOD , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_WBAK, KC_HOME, KC_UP  , KC_PGUP , XXXXXXX, XXXXXXX,
   // ├────────────────────────────────────────┤ ├────────────────────────────────────────┤
-       RGB_TOG , XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, KC_RCTL, KC_WFWD, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX,
+       RGB_TOG , XXXXXXX, KC_LALT, KC_LSFT, KC_RCTL, KC_LCTL, KC_WFWD, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX,
   // ├────────────────────────────────────────┤ ├────────────────────────────────────────┤
        RGB_RMOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PGDN, XXXXXXX, KC_END  , XXXXXXX, XXXXXXX,
   // ╰────────────────────────────────────────┤ ├────────────────────────────────────────╯
@@ -99,7 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├─────────────────────────────────────────┤ ├─────────────────────────────────────────┤
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_WBAK, KC_WFWD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├─────────────────────────────────────────┤ ├─────────────────────────────────────────┤
-      XXXXXXX, XXXXXXX, DRGSCRL, SNIPING, XXXXXXX, XXXXXXX, KC_RCTL, KC_LCTL, KC_LSFT, KC_LALT, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, DRGSCRL, SNIPING, XXXXXXX, XXXXXXX, KC_LCTL, KC_RCTL, KC_LSFT, KC_LALT, XXXXXXX, XXXXXXX,
   // ├─────────────────────────────────────────┤ ├─────────────────────────────────────────┤
       XXXXXXX, XXXXXXX, C(KC_X), C(KC_C), C(KC_V), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ╰─────────────────────────────────────────┤ ├─────────────────────────────────────────╯
@@ -117,7 +117,7 @@ void rgb_matrix_update_pwm_buffers(void);
 #ifdef ENCODER_MAP_ENABLE
 // clang-format off
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
-    [BASE]     = {ENCODER_CCW_CW(LCTL(KC_Z), LCTL(LSFT(KC_Z))), ENCODER_CCW_CW(GUI_V_LCH, CTRL_MAJ_V_LCH)},
+    [BASE]     = {ENCODER_CCW_CW(RCTL(KC_Z), RCTL(RSFT(KC_Z))), ENCODER_CCW_CW(GUI_V_LCH, CTRL_MAJ_V_LCH)},
     [FUNCTION] = {ENCODER_CCW_CW(KC_UP, KC_DOWN), ENCODER_CCW_CW(KC_UP, KC_DOWN)},
     [NAV]      = {ENCODER_CCW_CW(KC_UP, KC_DOWN), ENCODER_CCW_CW(KC_UP, KC_DOWN)},
     [IDE]      = {ENCODER_CCW_CW(KC_UP, KC_DOWN), ENCODER_CCW_CW(KC_UP, KC_DOWN)},
@@ -130,7 +130,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	switch (keycode) {
     	case CTRL_MAJ_V_LCH:
-      	    tap_code16(LCTL(LSFT(KC_V)));
+      	    tap_code16(RCTL(RSFT(KC_V)));
             layer_move(NAV);
            	return false;
        	case GUI_V_LCH:
