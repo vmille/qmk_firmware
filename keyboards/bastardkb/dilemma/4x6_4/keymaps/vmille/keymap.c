@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
  [FUNCTION] = LAYOUT(
  // ╭──────────────────────────────────────────────╮ ╭──────────────────────────────────────────────╮
-       KC_ESC , KC_CAPS,CG_LSWP,XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       KC_ESC , KC_CAPS,CG_LNRM,CG_LSWP, XXXXXXX, XXXXXXX, QK_BOOT, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
  // ├──────────────────────────────────────────────┤ ├──────────────────────────────────────────────┤
        XXXXXXX, KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_INSERT, XXXXXXX, XXXXXXX, XXXXXXX  , XXXXXXX, XXXXXXX, XXXXXXX,
  // ├──────────────────────────────────────────────┤ ├──────────────────────────────────────────────┤
@@ -98,9 +98,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭─────────────────────────────────────────╮ ╭─────────────────────────────────────────╮
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├─────────────────────────────────────────┤ ├─────────────────────────────────────────┤
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_WBAK, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_WBAK, KC_WFWD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├─────────────────────────────────────────┤ ├─────────────────────────────────────────┤
-      XXXXXXX, XXXXXXX, DRGSCRL, SNIPING, XXXXXXX, XXXXXXX, KC_WFWD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, DRGSCRL, SNIPING, XXXXXXX, XXXXXXX, KC_RCTL, KC_LCTL, KC_LSFT, KC_LALT, XXXXXXX, XXXXXXX,
   // ├─────────────────────────────────────────┤ ├─────────────────────────────────────────┤
       XXXXXXX, XXXXXXX, C(KC_X), C(KC_C), C(KC_V), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ╰─────────────────────────────────────────┤ ├─────────────────────────────────────────╯
